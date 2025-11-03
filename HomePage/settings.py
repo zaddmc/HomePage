@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv("SECRET_DJANGO_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = eval(os.getenv("DEBUG"))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["213.80.120.3", "clankersrefuge.dk"]
 
 
 # Application definition
