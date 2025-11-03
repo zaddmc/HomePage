@@ -18,9 +18,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from . import views
+from .views import AboutView, CustLoginView, HomeView, PricingView, ProductView
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", HomeView.as_view(), name="front-page"),
+    path("about/", AboutView.as_view(), name="front-page-about"),
+    path("products/", ProductView.as_view(), name="front-page-products"),
+    path("pricing/", PricingView.as_view(), name="front-page-pricing"),
+    path("login/", CustLoginView.as_view(), name="login"),
     path("admin/", admin.site.urls),
 ]
